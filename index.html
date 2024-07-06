@@ -7,28 +7,11 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="#" id="create-post-link">Create Post</a></li>
-      <li><a href="#" id="list-posts-link">List Posts</a></li>
-    </ul>
-  </nav>
-
-  <section id="create-post-section" class="hidden">
-    <h2>Create a new post</h2>
-    <form id="create-post-form">
-      <input type="text" id="title" placeholder="Title" required>
-      <textarea id="content" placeholder="Content" required></textarea>
-      <input type="text" id="author" placeholder="Author" required>
-      <button type="submit">Submit</button>
-    </form>
-  </section>
-
-  <section id="list-posts-section">
-    <h2>All Posts</h2>
-    <div id="posts-list"></div>
-  </section>
-
-  <script src="js/scripts.js"></script>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-router-dom/umd/react-router-dom.min.js" crossorigin></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="js/bundle.js"></script>
 </body>
 </html>
