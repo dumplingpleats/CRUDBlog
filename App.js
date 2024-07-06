@@ -1,8 +1,7 @@
 // src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import CreatePost from './components/CreatePost';
-import ListPosts from './components/ListPosts';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import PostManager from './components/PostManager';
 
 const App = () => {
   return (
@@ -10,13 +9,11 @@ const App = () => {
       <div>
         <nav>
           <ul>
-            <li><a href="/create">Create Post</a></li>
-            <li><a href="/">List Posts</a></li>
+            <li><Link to="/">Blog Posts</Link></li>
           </ul>
         </nav>
         <Switch>
-          <Route path="/create" component={CreatePost} />
-          <Route path="/" component={ListPosts} />
+          <Route path="/" component={PostManager} />
         </Switch>
       </div>
     </Router>
@@ -24,3 +21,4 @@ const App = () => {
 };
 
 export default App;
+
